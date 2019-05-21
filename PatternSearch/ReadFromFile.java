@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.Scanner;
 
 public class ReadFromFile
 {
@@ -14,7 +13,7 @@ public class ReadFromFile
                 text += st;
         }
         catch(Exception e){
-            System.out.println("Coś nie tak wpisano. Spróbuj \n tekst.txt \n text1.txt \n lub wzorzec1.txt");
+            System.out.println("Coś nie tak wpisano. Spróbuj\n\ttekst\n\twzorzec\n\ttext1\n\twzorzec1");
         }
         return text;
     }

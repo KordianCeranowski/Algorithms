@@ -13,9 +13,7 @@ class Main
         String P = test.getText(scanner.next() + ".txt");
 
         Naive.naive(P,T);
-        RabinKarp.rabinKarp(P, T);
+        RabinKarp.rabinKarp(P,T);
         KnuthMorrisPratt.KMP(P, T);
     }
-
-
 }

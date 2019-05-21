@@ -1,7 +1,7 @@
 public class Naive {
 
     static void naive(String P, String T) {
-
+        long start = System.currentTimeMillis();
         System.out.println("\n------------------------------------------------------------------\n\nZłożoność pesymistyczna naiwnego algorytmu wyszukiwania wzorca " +
                 "w tekście jest \nΘ(m(n − m + 1)) gdzie m to długość wzorca a n to długość tekstu.\n");
 
@@ -26,5 +26,6 @@ public class Naive {
             }
         }
         System.out.println("\nZnaleziono łącznie " + counter + " wzorców.");
+        System.out.println("Czas: " + (System.currentTimeMillis() - start) + "ms");
     }
 }

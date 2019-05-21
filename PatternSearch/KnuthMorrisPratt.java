@@ -1,8 +1,8 @@
 public class KnuthMorrisPratt {
 
     static void KMP(String P, String T){
-
-        System.out.println("\n------------------------------------------------------------------\n\nZłożoność pesymistyczna algorytmu Knutha-MorrisaPratta jest \nΘ(m+n) gdzie m to długość wzorca a n to długość tekstu.\n");
+        long start = System.currentTimeMillis();
+        System.out.println("\n------------------------------------------------------------------\n\nZłożoność pesymistyczna algorytmu Knutha-Morrisa-Pratta jest \nΘ(m+n) gdzie m to długość wzorca a n to długość tekstu.\n");
 
         int x = 0;
         int i = 0;
@@ -14,7 +14,7 @@ public class KnuthMorrisPratt {
 
             if(P.charAt(i) == T.charAt(x)){
                 if(i == P.length()-1){
-                    System.out.print(x-1 + ", ") ;
+                    System.out.print(x - P.length() +1 + ", ") ;
                     counter++;
                     i = array[i-1];
                     continue;
@@ -31,7 +31,7 @@ public class KnuthMorrisPratt {
 
         }
         System.out.println("\nZnaleziono łącznie " + counter + " wzorców.");
-
+        System.out.println("Czas: " + (System.currentTimeMillis() - start) + "ms");
     }
 
 
@@ -57,6 +57,7 @@ public class KnuthMorrisPratt {
             }
 
         }
+
         return array;
     }
 
